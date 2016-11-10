@@ -1,0 +1,46 @@
+@media (min-width: 769px) {
+
+  .push {
+    padding-top: 74px;
+  }
+
+	.name, .col {
+		float: left;
+	}
+
+  .name {
+  	margin-left: 20px;
+  }
+
+	.primary, .secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+  	margin: 9px 20px 0 0;
+	}
+
+	.main-nav li {
+		display: inline-block;
+  }
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1000px) {
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary, .tertiary {
+		width: 30%;
+	}
+
+}

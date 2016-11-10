@@ -1,0 +1,129 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+  height: 100%;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.main-nav {
+  margin: 0;
+  font-weight: 600;
+}
+
+.name a, .main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav a {
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+	padding-top: 8px;
+	padding-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.container {
+	width: 80%;
+  max-width: 1150px;
+	margin: auto;
+}
+
+.push {
+  padding-top: 254px;
+}
+
+.banner {
+  margin-bottom: 50px;
+  padding: 60px 0 20px;
+  text-align: center;
+	color: #fff;
+	background: #3acec2;
+  background: linear-gradient(to bottom, rgba(58, 206, 194, .75) 75%, white), url('../img/nyc.png');
+  background-repeat: repeat-x;
+}
+  
+.col {
+	padding: 0 15px;
+}
+
+.main-footer {
+	margin-top: 30px;
+  padding: 30px 0;
+  background: linear-gradient(to top, rgba(58, 206, 194, .75) 98%, rgba(0, 0, 0, .5));
+  color: #fff;
+  text-align: center;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 200px;
+}
+
+.headline {
+  padding-top: 50px;
+	margin: 0;
+  text-shadow: 1px 1px 2px #555;
+}
+
+.tagline {
+	font-size: 1.2em;
+  text-shadow: 1px 1px 1px #555;
+}
