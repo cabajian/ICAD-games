@@ -1,16 +1,16 @@
 @media (min-width: 769px) {
 
-  .push {
-    padding-top: 74px;
-  }
+	.push {
+	    padding-top: 74px;
+	}
 
 	.name, .col {
 		float: left;
 	}
 
-  .name {
-  	margin-left: 20px;
-  }
+  	.name {
+  		margin-left: 20px;
+ 	}
 
 	.primary, .secondary {
 		width: 50%;
@@ -23,7 +23,7 @@
 
 	.main-nav li {
 		display: inline-block;
-  }
+  	}
 
 	.clearfix::after {
 		content: " ";
