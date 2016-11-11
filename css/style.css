@@ -110,6 +110,7 @@ img {
 
 .feat-img {
 	border-radius: 25px;
+	overflow: hidden;
 }
 
 .main-footer {
