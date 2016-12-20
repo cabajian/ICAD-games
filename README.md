@@ -1,3 +1,3 @@
-# ICAD-best-city
+# ICAD-games
 
 Chris Abajian
