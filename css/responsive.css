@@ -39,12 +39,4 @@
 
 @media (min-width: 1000px) {
 
-	.primary {
-		width: 40%;
-	}
-
-	.secondary, .tertiary {
-		width: 30%;
-	}
-
 }
