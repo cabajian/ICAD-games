@@ -1,44 +1,71 @@
-/* ================================= 
+/* =================================
   Base Element Styles
-==================================== */
+  ==================================== */
 
-* {
-	box-sizing: border-box;
-}
+  * {
+   box-sizing: border-box;
+ }
 
-body {
-	font-family: 'Varela Round', sans-serif;
-	line-height: 1.6;
-	color: #3a3a3a;
-  height: 100%;
-}
+ html {
+   height: 100%;
+ }
 
-p {
-	font-size: .95em;
-	margin-bottom: 1.8em;
-}
+ body {
+   font-family: 'Varela Round', sans-serif;
+   line-height: 1.6;
+   color: #125B84;
+   height: 100%;
+ }
 
-h2,
-h3,
-a {
-	color: #093a58;
-}
+ p {
+   font-size: .95em;
+ }
 
-h2,
-h3 {
-	margin-top: 0;
-}
+ h2,
+ h3,
+ a {
+   color: #093a58;
+ }
 
-a {
-	text-decoration: none;
+ h2,
+ h3 {
+   margin-top: 0;
+ }
+
+ a {
+  text-decoration: none;
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
-/* ================================= 
-  Base Layout Styles
+input {
+  width: 100%;
+  outline-color: #125B84;
+  margin-bottom: 15px;
+}
+
+::-webkit-input-placeholder {
+ font-size: .8em;
+ text-align: center;
+}
+
+button {
+  background-color: #125B84;
+  border-radius: 28px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 20px;
+  display: block;
+  margin: auto;
+}
+
+/* =================================
+Base Layout Styles
 ==================================== */
 
 /* ---- Navigation ---- */
@@ -54,9 +81,9 @@ img {
 }
 
 .name a, .main-nav a {
-	text-align: center;
-	display: block;
-	padding: 5px 15px;
+ text-align: center;
+ display: block;
+ padding: 5px 15px;
 }
 
 .name a {
@@ -64,58 +91,72 @@ img {
 }
 
 .main-nav a {
-	color: #3acec2;
-	text-transform: uppercase;
+ color: #125B84;
+ text-transform: uppercase;
 }
 
 .main-nav a:hover {
-	color: #093a58;
+ color: #093a58;
 }
 
 /* ---- Layout Containers ---- */
 
+.sf {
+ min-height: 100%;
+ margin-bottom: -115px;
+}
+
+.sf:after {
+  content: "";
+  display: block;
+  height: 115px;
+}
+
 .main-header {
   position: fixed;
   width: 100%;
-  background: rgba(255,255,255,0.9);
-	padding-top: 8px;
-	padding-bottom: 8px;
+  background: rgb(255,255,255);
+  padding-top: 8px;
+  padding-bottom: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   z-index: 1;
 }
 
 .container {
-	width: 80%;
-  max-width: 1150px;
-	margin: auto;
+ width: 80%;
+ max-width: 1150px;
+ margin: auto;
 }
 
 .push {
-  padding-top: 209px;
+  padding-top: 139px;
 }
 
 .banner {
   margin-bottom: 50px;
   padding: 30px 0 30px;
   text-align: center;
-	color: #fff;
-	background: #3acec2;
-  background: linear-gradient(to bottom, rgba(58, 206, 194, .75) 75%, white), url('../img/nyc.png');
-  background-repeat: repeat-x;
+  color: #fff;
+  background: #125B84;
+  background: linear-gradient(to bottom, rgba(18, 91, 132, .85) 50%, rgb(232, 246, 255)), url('../img/dice-banner.jpg');
+  background-size: cover;
 }
-  
+
 .col {
-	padding: 0 15px;
+ padding: 0 15px;
+ margin: auto;
+ text-align: center;
 }
 
 .feat-img {
-	border-radius: 25px;
+ border-radius: 25px;
 }
 
 .main-footer {
-	margin-top: 30px;
+  margin-top: 30px;
   padding: 30px 0;
-  background: linear-gradient(to top, rgba(58, 206, 194, .75) 98%, rgba(0, 0, 0, .5));
+  height: 85px;
+  background: linear-gradient(to top, rgba(18, 91, 132, .75) 96%, rgba(9, 39, 56, 1));
   color: #fff;
   text-align: center;
 }
@@ -123,17 +164,37 @@ img {
 /* ---- Page Elements ---- */
 
 .logo {
-	width: 200px;
-  filter: drop-shadow(0 3px 5px #196660);
+ width: 200px;
+ filter: drop-shadow(0 3px 5px #114e70
+  );
 }
 
 .headline {
   padding-top: 5px;
-	margin: 0 0 -10px;
+  margin: 0 0 -10px;
   text-shadow: 1px 1px 2px #555;
 }
 
 .tagline {
-	font-size: 1.2em;
-  text-shadow: 1px 1px 1px #555;
+ font-size: 1.2em;
+ text-shadow: 1px 1px 1px #555;
+}
+
+#error {
+  display: none;
+  color: red;
+}
+
+#userImg, #compImg {
+  height: 50px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+#userOutput, #compOutput {
+  display: inline-block;
+}
+
+#firstDice, #secondDice {
+  height: 50px;
 }
