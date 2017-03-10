@@ -41,6 +41,7 @@ img {
 }
 
 input {
+  width: 100%;
   outline-color: #125B84;
   margin-bottom: 15px;
 }
@@ -179,8 +180,9 @@ Base Layout Styles
  text-shadow: 1px 1px 1px #555;
 }
 
-label {
-  margin-right: 10px;
+#error {
+  display: none;
+  color: red;
 }
 
 #userImg, #compImg {
