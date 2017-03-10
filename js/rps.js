@@ -1,51 +1,42 @@
-var userInput = document.getElementById('userInput');
+var rpsChoices = document.querySelectorAll('input[name="rpsChoice"]');
+var runRPS = document.getElementById('runRPS');
+var userMove;
 var userOutput = document.getElementById('userOutput');
 var compOutput = document.getElementById('compOutput');
 var userImg = document.getElementById('userImg');
 var compImg = document.getElementById('compImg');
 var result = document.getElementById('rpsResult');
-var error = document.getElementById('error');
 
 function toHTML(id, output) {
   id.innerHTML = output;
 }
 
-function isValid() {
-  userMove = userInput.value.toLowerCase();
-  if (userMove === "rock" || userMove === "paper" || userMove === "scissors") {
-    game();
-    error.style.display = "none";
-    userInput.value = "";
-  } else if (userMove == "") {
-    error.style.display = "none";
-    toHTML(userOutput, "");
-    toHTML(compOutput, "");
-    toHTML(result, "");
-  } else {
-    userImg.style.display = "none";
-    compImg.style.display = "none";
-    error.style.display = "block";
-    toHTML(userOutput, "");
-    toHTML(compOutput, "");
-    toHTML(result, "");
+function Radio(){
+  for (var i = 0; i < rpsChoices.length; i++)   {
+    if (rpsChoices[i].checked) {
+      userMove = rpsChoices[i];
+    }
   }
 }
 
+runRPS.addEventListener("click", game);
+
 function game() {
-  toHTML(userOutput, "You chose to play " + userMove.bold() + '.');
+	Radio();
+  toHTML(userOutput, "You chose to play " + userMove.value.bold() + '.');
   computerMove();
   rpsImg();
-  decision(userMove, compMove);
+  decision(userMove.value, compMove);
 }
 
 function computerMove() {
   compMove = Math.random();
   if (compMove < 0.34) {
-    compMove = "rock";
+    compMove = "Rock";
   } else if (compMove < .67) {
-    compMove = "paper";
+    compMove = "Paper";
   } else {
-    compMove = "scissors";
+    compMove = "Scissors";
   }
   toHTML(compOutput, "The computer played " + compMove.bold() + '.');
 }
@@ -53,35 +44,20 @@ function computerMove() {
 function rpsImg() {
   userImg.style.display = "inline";
   compImg.style.display = "inline";
-  userImg.src = "img/" + userMove + ".png";
+  userImg.src = "img/" + userMove.value.toLowerCase() + ".png";
   compImg.src = "img/" + compMove + ".png";
-  console.log(userImg.src);
 }
 
 function decision(move1, move2) {
   if (move1 === move2) {
     toHTML(result, "You Tied!");
-  } else if (move1 === "rock" && move2 === "scissors") {
+  } else if (move1 === "Rock" && move2 === "Scissors") {
     toHTML(result, "You won!");
-  } else if (move1 === "paper" && move2 === "rock") {
+  } else if (move1 === "Paper" && move2 === "Rock") {
     toHTML(result, "You won!");
-  } else if (move1 === "scissors" && move2 === "paper") {
+  } else if (move1 === "Scissors" && move2 === "Paper") {
     toHTML(result, "You won!");
   } else {
     toHTML(result, "You lost!");
   }
 }
-
-function rpsReset() {
-  error.style.display = "none";
-  userImg.style.display = "none";
-  compImg.style.display = "none";
-  userInput.value = "";
-  toHTML(userOutput, "");
-  toHTML(compOutput, "");
-  toHTML(result, "");
-}
-
-userInput.addEventListener('change', function() {
-  isValid();
-});

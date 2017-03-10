@@ -36,8 +36,10 @@
           </ul>
           <br>
           <!-- rps -->
-          <input id="userInput" onfocusout="rpsReset()" placeholder="Please enter rock, paper, or scissors.">
-          <p id="error">Please enter rock, paper, or scissors!</p>
+		  		<label><input type="radio" name="rpsChoice" value="Rock" />Rock</label>
+		  		<label><input type="radio" name="rpsChoice" value="Paper" />Paper</label>
+		  		<label><input type="radio" name="rpsChoice" value="Scissors" />Scissors</label>
+		  		<button id="runRPS">Play</button>
           <p id="userOutput"></p><img id="userImg">
           <br>
           <p id="compOutput"></p><img id="compImg">
